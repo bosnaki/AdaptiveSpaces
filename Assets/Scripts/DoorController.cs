@@ -17,7 +17,9 @@ public class DoorController : MonoBehaviour {
         radiusSqr = activationRadius * activationRadius;
         InvokeRepeating(nameof(CheckDistance), 0f, checkInterval);
     }
-
+    /*
+    private void OnTriggerEnter2D(Collider2D collision) {
+    }*/
     private void CheckDistance() {
         Vector2 diff = (Vector2)player.position - (Vector2)transform.position;
         float distanceSqr = diff.sqrMagnitude;

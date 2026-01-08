@@ -23,4 +23,8 @@ public class MovingObstacleController : MonoBehaviour
         float t = Mathf.PingPong(timer, moveTime) / moveTime;
         transform.position = Vector3.Lerp(startingPosition, endingPosition, t);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        GameManager.instance.UpdateGameState(GameManager.GameState.Lose);
+    }
 }
