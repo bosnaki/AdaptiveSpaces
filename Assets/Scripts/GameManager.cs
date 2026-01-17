@@ -45,6 +45,9 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Room1Entrance:
                 break;
+            case GameState.End:
+                Debug.Log("Game ends!");
+                break;
             default:
                 Debug.Log("Out of Range for GameStates");
                 break;
@@ -83,6 +86,7 @@ public class GameManager : MonoBehaviour
         Room1Entrance,
         Room2Entrance,
         Room3Entrance,
-        Room4Entrance
+        Room4Entrance,
+        End
     }
 }
